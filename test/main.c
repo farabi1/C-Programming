@@ -1,30 +1,13 @@
-# include <stdio.h>
-void dbl ( int * ) ;
-void tple ( int * ) ;
-void qdpl ( int * ) ;
-int main( )
+#include <stdio.h>
+void fun(int x)
 {
-    int  num = 2, i ;
-    void ( *p[ ] )( int * ) = { dbl, tple, qdpl } ;
-    for ( i = 0 ; i < 3 ; i++ )
-    {
-        p[ i ]( &num ) ;
-        printf ( "%d\n", num ) ;
-    }
-    return 0 ;
+x = 30;
 }
 
-void dbl ( int *n )
+int main(void)
 {
-    *n = *n * *n ;
-}
-
-void tple ( int *n )
-{
-    *n = *n * *n * *n ;
-}
-
-void qdpl ( int *n )
-{
-    *n = *n * *n * *n * *n ;
+	int x = 20;
+	fun(x);
+	printf("x = %d", x);
+	return 0;
 }
